@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>알럿창</title>
+</head>
+<style>
+  html, body {
+    font-size: 10px;
+  }
+  .alert-box {
+    display: none;
+    background-color: antiquewhite;
+    padding: 2rem;
+    font-size: 2rem;
+  }
+</style>
+<body>
+  <div class="alert-box" id="alert">
+    <p id="title">Alert 박스</p>
+    <button onclick="알림창열기('none')"> X </button>
+  </div>
+
+  <button onclick="알림창1열기()">버튼1</button>
+  <button onclick="알림창2열기()">버튼2</button>
+
+  <script>
+    
+    function 알림창1열기(){
+      document.getElementById('title').innerHTML = '아이디를 입력하세요';
+      document.getElementById('alert').style.display = 'block';
+    }
+
+    function 알림창2열기(){
+      document.getElementById('title').innerHTML = '비번을 입력하세요';
+      document.getElementById('alert').style.display = 'block';
+    }
+
+    function 알림창열기(구멍){
+      document.getElementById('alert').style.display = 구멍;
+    }
+
+   
+    // 아이디를 입력하세요
+    // 비밀번호를 입력하세요
+
+    const person = {
+      name: '문동은',
+      age: 30,
+      greet: function() {
+        console.log(`내이름은 ${this.name}이며, 나이는 ${this.age}살 입니다.`)
+      }
+
+    };
+    person.greet();
+
+    console.log(
+      String(3)
+    );
+    console.log()
+
+    
+
+    let num = 10;
+    let result = ++num;
+
+    console.log(result)
+
+    const age = 19;
+
+    if(age>19){
+      console.log('환영');
+    } else if(age === 19) {
+      console.log('수능잘봐');
+    } else {
+      console.log('돌아가');
+    }
+
+    console.log('===========================')
+
+    const name = "Mike";
+    const ageNew = 20;
+
+    if(name === "Mike" && ageNew > 19){
+      console.log('통과');
+    } else {
+      console.log('돌아가');
+    }
+
+    const ageExam = prompt('나이가 몇살이야?');
+    const isAdult = age > 19;
+
+    if(!isAdult){
+      console.log('돌아가세요');
+    }
+    
+
+    // 코딩앙마 기초강좌 42:22 부터~
+  </script>
+</body>
+</html>
